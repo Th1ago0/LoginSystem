@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Seven Dumbs{% endblock %}
+{% block head %}
+	<link rel="stylesheet" href="{% static 'core/styles/home.css' %}" type="text/css" media="all" />
+{% endblock %}
+	
+{% block content %}
+	<header class="header">
+		<h1 id="logo" class="notranslate" translate="no">
+			<span>&lt;</span><span>S</span>even <span>D</span>umbs<span>&gt;</span>
+		</h1>
+	</header>
+	<div class="title-father">
+		<h1 id="title">
+			BAIXE JÁ O MAIS NOVO GAME DA <span>S</span>EVEN <span>D</span>UMBS!!
+		</h1>
+	</div>
+	<div id="father-nameG">
+		<h3 translate="no">NOBODY</h3>
+	</div>
+
+	<main class="main">
+		<div>
+			<p>
+				Nobody é um jogo 2D, totalmente feito em pixel. Com 3 fases diferentes, opções de jogabilidade para o jogador, músicas e efeitos sonoros marcantes! Uma história repleta de ação e aventura, com personagens que possuem design simples porém muito bem elaborados. Cenários belos e obstáculos que irão cobrar o máximo de concentração possível do jogador!
+			</p>
+			<p>
+				<div id="button" for="a">
+					<h2>BAIXAR<span>.</span></h2>
+				</div>
+				<br><br>
+			</p>
+		</div>
+	</main>
+	<div class="logout">
+		<a href="{% url 'logout' %}">logout</a>
+	</div>
+{% endblock %}

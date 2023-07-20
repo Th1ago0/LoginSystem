@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+{% block head %}
+	<link rel="stylesheet" href="{% static 'core/styles/login.css' %}" type="text/css" media="all" />
+{% endblock %}
+{% block content %}
+	<form class="container" method="POST" action="{% url 'login' %}">
+		{% csrf_token %}
+		<div class="title">
+			<h1>
+				<span>&lt;</span>Login<span>&gt;</span>
+			</h1>
+			<p>
+			<hr/>
+		<div class="signup">
+			<a href="{% url 'sign_up' %}">Não tem uma conta? Cadastre-se</a>
+		</div>
+		</div>
+		<div class="inputs">
+			<label for="email">Email</label>
+			{{form.email}}
+			<label for="password">Senha</label>
+			{{form.password}}
+		</div>
+		<div class="cont_error_message">
+			<h5>
+				{% if error_message %}
+					<span class="material-symbols-rounded">error</span>
+					
+					{{ error_message }}
+					
+				{% endif %}
+			</h5>
+		</div>
+		<div class="cont_button">
+			<button type="submit">
+				Enviar
+				<span>.</span>
+			</button>
+		</div>
+		<div class="cont_footer">
+			<footer class="footer">
+				<span>&lt;</span><span>S</span>even <span>D</span>umbs<span>&gt;</span>
+			</footer>
+		</div>
+	</form>
+{% endblock %}

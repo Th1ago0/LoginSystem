@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    backdrop-filter: blur(5px);
+    background-image: url("../images/bg.png");
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    color: #444;
+}
+
+.container {
+    box-shadow: 2px 2px 25px 21px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+    width: 83vw;
+    height: 500px;
+    border-radius: 0.6rem;
+    background-color: #f9f9f9;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+    align-items: center;
+    position: relative;
+}
+.title {
+    text-align: center;
+}
+.title span {
+    color: #47b5ff;
+}
+.title h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+.title p {
+    color: #777;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 15px;
+}
+
+.cont_footer {
+    text-align: center;
+    font-size: 25px;
+}
+
+.cont_footer span {
+    color: #47b5ff;
+}
+
+.cont_button {
+    text-align: center;
+    margin-top: auto;
+    padding: 10px;
+}
+.cont_button button {
+    font-family: "Poppins", Sans-Serif;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #47b5ff;
+    color: white;
+    border-bottom: solid 3px #36a4ee;
+    border-top: solid 2.5px #ffffff66;
+}
+.cont_button span {
+    color: #ffdd33;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 90%;
+}
+
+.inputs label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+.inputs input {
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #999;
+    outline: none;
+    background-color: #f9f9f9;
+    font-family: "Poppins", sans-serif;
+}
+hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    width: 83vw;
+}
+.cont_error_message {
+    margin-top: 5px;
+    color: #f44;
+}
+.login {
+    font-size: 10px;
+    text-align: right;
+    padding: 10px;
+    position: absolute;
+    top: 65px;
+    right: 15px;
+}
+.login a {
+    text-decoration: none;
+    color: #36a4ff;
+}

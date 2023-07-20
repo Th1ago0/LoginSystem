@@ -1,0 +1,50 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+	Cadastre-se 
+{% endblock %}
+
+{% block head %}
+	<link rel="stylesheet" href="{% static 'core/styles/sign_up.css' %}" type="text/css" media="all" />
+{% endblock %}
+
+{% block content %}
+	<form class="container" method="POST" action="{% url 'sign_up' %}">
+		{% csrf_token %}
+		<div class="title">
+			<h1>
+				<span>&lt;</span>Cadastre-se<span>&gt;</span>
+			</h1>
+			<p>
+				Fique por dentro das novidades
+			</p>
+			<hr />
+		</div>
+		<div class="login">
+			<a href="{% url 'login' %}">Já tem uma conta? Loge-se</a>
+		</div>
+		<div class="inputs">
+			<label for="name">Nome</label>
+			{{form.name}}
+			<label for="email">Email</label>
+			{{form.email}}
+			<label for="password">Senha</label>
+			{{form.password}}
+			<label for="password_confirmation">Confirme sua Senha</label>
+			<input type="password" name="password_confirmation" id="password_confirmation" value="" placeholder="Confirme" />
+		</div>
+		<div class="cont_error_message">
+		<h5>
+		</h5>
+		</div>
+		<div class="cont_button">
+		<button type="submit">Cadastrar<span>.</span></button>
+		</div>
+		<div class="cont_footer">
+		<footer class="footer">
+			<span>&lt;</span><span>S</span>even <span>D</span>umbs<span>&gt;</span>
+		</footer>
+		</div>
+	</form>
+{% endblock %}
